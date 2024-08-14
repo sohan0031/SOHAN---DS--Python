@@ -6,13 +6,13 @@ class Bank_balance():
         self.Balance = Balance
         self.Account_Number = Account_Number
 
-    def Debit(self,deb):
+    def Debit(self,deb = None):
         deb = int(input("Enter Amount to Debit : "))
         self.Balance-=deb
         print("The Account is deboted by : ", deb)
         print("The Balance is :",self.Balance)
         
-    def Credit(self,cred):
+    def Credit(self,cred = None):
         cred = int(input("Enter Amount to Credit : "))
         self.Balance += cred
         print("The Account is Credited by : ", cred)
@@ -28,8 +28,8 @@ Balance = int(input("Enter Account Balance : " ))
 Account_Number = int(input("Enter Account Number :"))
 
 a1 = Bank_balance(Balance ,Account_Number )
-a1.Debit(1000)
-a1.Credit(100)
+a1.Debit()
+a1.Credit()
 a1.show_Balance()
 
 
