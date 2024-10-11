@@ -5,7 +5,7 @@ class Node :
         self.items = items
         self.next = None
 
-class Circular_Que :
+class Fast_Food:
     def __init__(self) :
         self.front = None
         self.rear = None
@@ -44,7 +44,7 @@ class Circular_Que :
             if current  == self.front:
                 break
             
-Q = Circular_Que()
+F = Fast_Food()
 
 while True :
     print("Menu :")
@@ -59,18 +59,18 @@ while True :
         order_id= int(input("Enter Order Id :"))
         cust_name  = input("Enter Customer Name :")
         items = (input("Enter Items To order :"))
-        Q.take_order(order_id,cust_name,items)
+        F.take_order(order_id,cust_name,items)
         print("Order Added Succesfully..........")
         print("")
     
     elif choice == 2 :
-        a = Q.Process_order()
+        a = F.Process_order()
         print(f"Order with ID {a} Comleted Succesfully...............")
         print("")
         
     elif choice ==3   :
         print("\nOrders in Queue : ")
-        Q.printQ()
+        F.printQ()
         print("")
         
     elif choice == 4 :
