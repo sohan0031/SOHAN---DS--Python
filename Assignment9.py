@@ -1,8 +1,8 @@
-class Node :
-    def __init__(self,order_id,cust_name,items) :
+class Customer :
+    def __init__(self,order_id,cust_name,food_items) :
         self.order_id = order_id
         self.cust_name = cust_name
-        self.items = items
+        self.items = food_items
         self.next = None
 
 class Fast_Food:
@@ -10,8 +10,8 @@ class Fast_Food:
         self.front = None
         self.rear = None
 
-    def take_order(self,order_id,cust_name,items):
-        new_order = Node(order_id,cust_name,items)
+    def take_order(self,order_id,cust_name,food_items):
+        new_order = Customer(order_id,cust_name,food_items)
         if self.rear is None:
             self.front = self.rear = new_order
             self.rear.next = self.front
@@ -58,8 +58,8 @@ while True :
     if choice == 1 :
         order_id= int(input("Enter Order Id :"))
         cust_name  = input("Enter Customer Name :")
-        items = (input("Enter Items To order :"))
-        F.take_order(order_id,cust_name,items)
+        food_items = (input("Enter Items To order :"))
+        F.take_order(order_id,cust_name,food_items)
         print("Order Added Succesfully..........")
         print("")
     
